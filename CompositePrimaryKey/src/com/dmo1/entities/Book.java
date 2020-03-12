@@ -3,11 +3,25 @@ package com.dmo1.entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "b_tab")
 public class Book implements Serializable {
-	protected String bookName;
-	protected Date publishedDt;
-	protected String isbn;
+	@EmbeddedId
 	protected BookPk pk;
+
+	@Column(name = "book_name")
+	protected String bookName;
+	
+	@Column(name = "published_date")
+	protected Date publishedDt;
+	
+	protected String isbn;
+	
 
 	public String getBookName() {
 		return bookName;
