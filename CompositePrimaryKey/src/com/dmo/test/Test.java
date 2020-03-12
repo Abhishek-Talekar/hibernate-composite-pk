@@ -20,7 +20,9 @@ public class Test {
 			sessionFactory = SessionFactoryRegistry.getSessionFactory();
 			session = sessionFactory.openSession();
 			transaction = session.beginTransaction();
-			Book b1 = null;
+			Book b1 = new Book();
+			b1.setAuthor("Wrox Author");
+			b1.setBookId(1);
 
 //			b1.setBookId(1);
 //			b1.setAuthor("Wrox women");
@@ -30,7 +32,7 @@ public class Test {
 //			Object id = session.save(b1);
 //			System.out.println(id);
 
-			Book bdata =(Book)session.get(Book.class, 1);
+			Book bdata =(Book)session.get(Book.class, b1);
 			System.out.println(bdata);
 
 			flag = true;

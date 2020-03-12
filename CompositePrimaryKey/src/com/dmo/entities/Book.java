@@ -4,9 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Book implements Serializable {
-	protected int bookId;
 	protected String bookName;
-	protected String author;
 	protected Date publishedDt;
 	protected String isbn;
 
