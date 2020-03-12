@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dmo.entities">
+	<class name="Book" table="books">
+		<composite-id>
+			<key-property name="bookId" column="uq_book_id"/>
+			<key-property name="author" column="uq_author"/>
+		</composite-id>
+		<property name="bookName" column="book_name" />
+		<property name="isbn" />
+		<property name="publishedDt" column="published_date"/>
+	</class>
+</hibernate-mapping>
