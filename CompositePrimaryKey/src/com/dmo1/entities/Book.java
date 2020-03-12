@@ -1,4 +1,4 @@
-package com.dmo.entities;
+package com.dmo1.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,14 +7,7 @@ public class Book implements Serializable {
 	protected String bookName;
 	protected Date publishedDt;
 	protected String isbn;
-
-	public int getBookId() {
-		return bookId;
-	}
-
-	public void setBookId(int bookId) {
-		this.bookId = bookId;
-	}
+	protected BookPk pk;
 
 	public String getBookName() {
 		return bookName;
@@ -22,14 +15,6 @@ public class Book implements Serializable {
 
 	public void setBookName(String bookName) {
 		this.bookName = bookName;
-	}
-
-	public String getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(String author) {
-		this.author = author;
 	}
 
 	public Date getPublishedDt() {
@@ -48,10 +33,17 @@ public class Book implements Serializable {
 		this.isbn = isbn;
 	}
 
+	public BookPk getPk() {
+		return pk;
+	}
+
+	public void setPk(BookPk pk) {
+		this.pk = pk;
+	}
+
 	@Override
 	public String toString() {
-		return "Book [bookId=" + bookId + ", bookName=" + bookName + ", author=" + author + ", publishedDt="
-				+ publishedDt + ", isbn=" + isbn + "]";
+		return "Book [bookName=" + bookName + ", publishedDt=" + publishedDt + ", isbn=" + isbn + ", pk=" + pk + "]";
 	}
 
 }

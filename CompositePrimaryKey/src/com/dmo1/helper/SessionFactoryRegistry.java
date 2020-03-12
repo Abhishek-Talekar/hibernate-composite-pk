@@ -1,4 +1,4 @@
-package com.dmo.helper;
+package com.dmo1.helper;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
