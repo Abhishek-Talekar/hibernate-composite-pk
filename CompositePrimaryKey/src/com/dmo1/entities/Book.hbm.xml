@@ -2,9 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC 
 "-//Hibernate/Hibernate Mapping DTD//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="com.dmo.entities">
+<hibernate-mapping package="com.dmo1.entities">
 	<class name="Book" table="books">
-		<composite-id>
+		<composite-id name="pk">
 			<key-property name="bookId" column="uq_book_id"/>
 			<key-property name="author" column="uq_author"/>
 		</composite-id>

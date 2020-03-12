@@ -1,6 +1,8 @@
 package com.dmo1.entities;
 
-public class BookPk {
+import java.io.Serializable;
+
+public class BookPk implements Serializable{
 	protected int bookId;
 	protected String author;
 
